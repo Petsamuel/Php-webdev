@@ -1,0 +1,15 @@
+{
+  "name": "webdev_project",
+  "version": "1.0.0",
+  "description": "IT website ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw": "npx tailwindcss -i ./assets/css/styles.css -o ./assets/css/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}
