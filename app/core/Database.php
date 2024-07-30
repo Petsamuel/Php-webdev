@@ -1,28 +1,53 @@
-<?php
+<?php 
 
-trait Database{
+Trait Database
+{
 
-    private function connect(){
+	private function connect()
+	{
+		$string = "mysql:hostname=".DBHOST.";dbname=".DBNAME;
+		$con = new PDO($string,DBUSER,DBPASS);
+		return $con;
+	}
 
-        $string = "mysql:hostname=".DBHOST. "dbname".DBNAME;
-         $connect = new PDO ($string, DBUSER, '');
-         return $connect;
-    }
-    
-    public function query($query, $data=[]){
-        $connect = $this->connect();
-        $qry = $connect->prepare($query);
+	public function query($query, $data = [])
+	{
 
-        $checker = $qry->execute($data);
-        if($checker){
-            $result = $qry->fetchAll(PDO::FETCH_OBJ);
-            
-        }
-        if(is_array($result) && count($result)){
-            return $result;
-        }
+		$con = $this->connect();
+		$stm = $con->prepare($query);
 
-        return false;
+		$check = $stm->execute($data);
+		if($check)
+		{
+			$result = $stm->fetchAll(PDO::FETCH_OBJ);
+			if(is_array($result) && count($result))
+			{
+				return $result;
+			}
+		}
 
-    }
+		return false;
+	}
+
+	public function get_row($query, $data = [])
+	{
+
+		$con = $this->connect();
+		$stm = $con->prepare($query);
+
+		$check = $stm->execute($data);
+		if($check)
+		{
+			$result = $stm->fetchAll(PDO::FETCH_OBJ);
+			if(is_array($result) && count($result))
+			{
+				return $result[0];
+			}
+		}
+
+		return false;
+	}
+	
 }
+
+

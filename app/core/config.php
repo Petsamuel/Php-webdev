@@ -12,7 +12,7 @@
 
 // development constant 
 define('ROOT', "http://localhost/webdev/");
-define ('DBNAME', "test");
+define ('DBNAME', "webdev");
 define ('DBHOST', "localhost");
 define ('DBUSER', "root");
 define ('DBPASS', "");

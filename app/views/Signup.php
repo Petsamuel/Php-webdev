@@ -11,6 +11,11 @@ include __DIR__.'/Components/header.php'; // Include the header
 
   <form method="post">
     <h2 class="font-thin text-4xl">Register</h2>
+        <?php if(!empty($errors)):?>
+        <div class="alert alert-danger">
+            <?= implode("<br>", $errors)?>
+        </div>
+        <?php endif;?>
     <div class="flex flex-col gap-3 mt-5 font-['Poppins'] items-start">
         <div  class="flex flex-col">
             <label for="email" class="my-2">Username or Email Address *</label>
@@ -23,8 +28,8 @@ include __DIR__.'/Components/header.php'; // Include the header
 
         <div class="flex justify-between w-full mt-5 items-center" >
             <div>
-                <input type="checkbox" name="remember" id="remember" >
-                <label for="remember">Accept terms </label>
+                <input type="checkbox" name="terms" id="remember" >
+                <label for="remember" class="text-sm" name="terms">Accept terms</label>
             </div>
 
             <a href="<?=ROOT?>login" class="italic text-sm hover:text-blue-500"> have an account? </a>

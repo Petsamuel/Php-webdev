@@ -1,21 +1,21 @@
 <?php
 
 
-class Home extends Controller {
+class Home  {
 
+    use Controller;
     public function index(){
 
-        // echo "this is the home controller";
-        // $modal = new Model;
-        // $modal->test();
-        $this->view('home');
+        $data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
+        $this->view('home', $data);
 
     }
     public function edit(){
 
         echo "this is the home edit controller";
   
-        $this->view('home');
+        $data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
+        $this->view('home', $data);
 
     }
 

@@ -9,7 +9,7 @@ include __DIR__.'/Components/header.php'; // Include the header
 
 <main>
     <h2>Welcome to My Website</h2>
-    <p>This is the home page content.</p>
+    <p>This is the home page content. <?=$username ?> </p>
 </main>
 
 

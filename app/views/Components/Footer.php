@@ -1,5 +1,5 @@
     <footer>
-        <p>&copy; <?= date('Y'); ?> My Website. All rights reserved.</p>
+        <p>&copy; <?= date('Y'); ?> GROUP 5. All rights reserved.</p>
     </footer>
     
 </body>
