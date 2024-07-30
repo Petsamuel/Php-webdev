@@ -11,7 +11,7 @@
 // }
 
 // development constant 
-define('ROOT', "http://localhost/webdev/");
+define('ROOT', "http://localhost/webdev");
 define ('DBNAME', "webdev");
 define ('DBHOST', "localhost");
 define ('DBUSER', "root");
