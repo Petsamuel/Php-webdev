@@ -12,9 +12,9 @@ include __DIR__.'/Components/header.php'; // Include the header
   <form method="post">
     <h2 class="font-thin text-4xl">Register</h2>
         <?php if(!empty($errors)):?>
-        <div class="alert alert-danger">
-            <?= implode("<br>", $errors)?>
-        </div>
+            <div class="bg-rose-300 text-red-600 border-2 border-rose-700 w-fit">
+                <?= implode("<br>", $errors)?>
+            </div>
         <?php endif;?>
     <div class="flex flex-col gap-3 mt-5 font-['Poppins'] items-start">
         <div  class="flex flex-col">

@@ -12,7 +12,7 @@ include __DIR__.'/Components/header.php'; // Include the header
   <form method="post">
     <h2 class="font-thin text-4xl">Login</h2>
     <?php if(!empty($errors)):?>
-      <div class="bg-rose-300 text-red-600">
+      <div class="bg-rose-300 text-red-600 border-2 border-rose-700">
         <?= implode("<br>", $errors)?>
       </div>
     <?php endif;?>

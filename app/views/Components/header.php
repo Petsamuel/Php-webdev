@@ -15,6 +15,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <li><a href="<?=ROOT?>/logout">Logout</a></li>
             </ul>
         </nav>
     </header>
